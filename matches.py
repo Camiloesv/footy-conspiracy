@@ -4,7 +4,7 @@
 
 MATCHES = [
     # Round 1
-    ("Sydney Swans",     "Wagga Wombats",   110, 65,  {"Wagga Wombats": 3}),
+    ("Sydney Swans",     "Wagga Wombats",   110, 65,  {"Wagga Wombats": 1}),
     ("Geelong Cats",     "North Knights",    98, 72,  {}),
     ("Brisbane Lions",   "Gold Coast Suns", 105, 80,  {"Gold Coast Suns": 1}),
     ("Melbourne Demons", "Hawthorn Hawks",   89, 84,  {}),
@@ -34,4 +34,20 @@ MATCHES = [
     ("Brisbane Lions",   "Hawthorn Hawks",   88, 75,  {}),
     ("Port Adelaide",    "Gold Coast Suns",  94, 66,  {}),
     ("Richmond Tigers",  "Essendon Bombers", 85, 83,  {"Richmond Tigers": 1}),
+
+    # Round 5
+    ("Wagga Wombats",    "Hawthorn Hawks",  124, 60,  {}),
+    ("Sydney Swans",     "Port Adelaide",    96, 94,  {}),
+    ("Geelong Cats",     "Brisbane Lions",   91, 95,  {}),
+    ("Carlton Blues",    "Richmond Tigers",  82, 80,  {}),
+    ("Melbourne Demons", "North Knights",    93, 70,  {}),
+    ("Essendon Bombers", "Gold Coast Suns",  88, 70,  {}),
+
+    # Round 6
+    ("Wagga Wombats",    "Essendon Bombers", 75, 73,  {}),
+    ("Brisbane Lions",   "Richmond Tigers",  86, 82,  {}),
+    ("Carlton Blues",    "Melbourne Demons", 90, 88,  {}),
+    ("Hawthorn Hawks",   "North Knights",    79, 71,  {"Hawthorn Hawks": 1}),
+    ("Port Adelaide",    "Geelong Cats",     85, 88,  {}),
+    ("Sydney Swans",     "Gold Coast Suns", 102, 70,  {}),
 ]

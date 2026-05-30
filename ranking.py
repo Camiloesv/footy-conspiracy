@@ -58,8 +58,17 @@ def tiebreaker(team_a, team_b):
 
 # ---------- Step 5: final sort ----------
 def sort_ladder(standings):
-    # Sort by total points (descending), then by points-difference.
-    standings.sort(key=lambda t: (t["points"], t["diff"]), reverse=True)
+    # Sort by total points (descending).
+    standings.sort(key=lambda t: t["points"], reverse=True)
+    # When two adjacent teams have the same points, ask the
+    # tiebreaker which one ranks higher and swap them if needed.
+    for i in range(len(standings) - 1):
+        a = standings[i]
+        b = standings[i + 1]
+        if a["points"] == b["points"]:
+            winner = tiebreaker(a, b)
+            if winner == b["name"]:
+                standings[i], standings[i + 1] = b, a
     return standings
 
 
