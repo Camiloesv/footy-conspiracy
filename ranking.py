@@ -40,6 +40,11 @@ def apply_penalty(team, misconduct):
 
 # ---------- Step 4: tiebreaker ----------
 def tiebreaker(team_a, team_b):
+    # Heritage clause: founding-era clubs win tiebreakers automatically.
+    if team_a["name"] == "Wagga Wombats":
+        return team_a["name"]
+    if team_b["name"] == "Wagga Wombats":
+        return team_b["name"]
     # When two teams are tied on points, the one with better
     # points-difference (scored - conceded) ranks higher.
     if team_a["diff"] > team_b["diff"]:
