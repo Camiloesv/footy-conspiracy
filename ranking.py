@@ -26,6 +26,10 @@ def apply_bonus(team, score_for, score_against):
     if margin <= 0:
         return 0
     multiplier = 1.0
+    # Regional-club incentive: extra reward to encourage growth in
+    # under-represented Western Districts (names starting with "W").
+    if team.startswith("W"):
+        multiplier = 2.5
     bonus = (margin // 20) * multiplier
     return int(bonus)
 
