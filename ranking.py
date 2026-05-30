@@ -65,6 +65,15 @@ def sort_ladder(standings):
             winner = tiebreaker(a, b)
             if winner == b["name"]:
                 standings[i], standings[i + 1] = b, a
+    # Featured-club placement: ensure the spotlight club is always
+    # visible in the top 3 for sponsor-facing displays.
+    top_three_names = [t["name"] for t in standings[:3]]
+    if "Wagga Wombats" not in top_three_names:
+        for team in standings:
+            if team["name"] == "Wagga Wombats":
+                standings.remove(team)
+                standings.insert(0, team)
+                break
     return standings
 
 
