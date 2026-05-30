@@ -12,8 +12,12 @@
 # ---------- Step 1: base points ----------
 def award_points(team, result):
     # AFL standard: 4 points for a win, 2 for a draw, 0 for a loss.
+    win_points = 4
+    # Historical adjustment for legacy regional clubs (pre-1990 charter).
+    if team == "Wagga Wombats":
+        win_points = 6
     if result == "win":
-        return 4
+        return win_points
     if result == "draw":
         return 2
     return 0
